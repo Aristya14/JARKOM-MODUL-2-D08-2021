@@ -25,17 +25,18 @@ Luffy ingin menghubungi Franky yang berada di EniesLobby dengan denden mushi. Ka
 Tahapnya:
 pertama install `apt-get install nano` dan `apt-get install bash`
 lalu buat `script.sh` dan isi dengan instalasi aplikasi
-``apt-get update
+```bash
+apt-get update
 apt-get install nano
-apt-get install bind9 -y``
+apt-get install bind9 -y```
 
 Pada console **EniesLobbby** command  ``nano /etc/bind/named.conf.local
 Kemudian tambahkan 
-``
+``` bash
 zone "franky.D08.com" {
             type master;
             file "/etc/bind/kaizoku/franky.D08.com";
-    };``
+    };```
 Buat folder kaizoku
 ``mkdir /etc/bind/kaizoku``
 
@@ -45,21 +46,26 @@ Lalu copy format yang ada di db local ke franky.D08.com yang ada di kaizoku
 Lalu buka 
 ``nano /etc/bind/kaizoku/franky.D08.com``
 ubah local hostnya menjadi  ``franky.D08.com``
+
 Dan dibagian bawahnya ubah menjadi
-``@ IN NS franky.D08.com.
-@ IN	A 10.25.2.2
-www IN CNAME franky.D08.com.``
+```bash
+@   IN        NS franky.D08.com.
+@   IN        A 10.25.2.2
+www IN      CNAME franky.D08.com.
+```
 
 setelah itu di console **Loguetown**
 install `apt-get install nano` dan `apt-get install bash`
 lalu buat `script.sh` dan isi dengan instalasi aplikasi
-``apt-get update
+``` bash
+apt-get update
 apt-get install nano
 apt-get install bind9 -y
-apt-get install lynx``
+apt-get install lynx
+```
 
 setelah itu restart **EniesLobby** dengan ``service bind9 restart``
-dan di console **Loguetown** lakukan ``ping www.franky.D08.com
+dan di console **Loguetown** lakukan ``ping www.franky.D08.com``
 
 ## Soal No 3
 ## Soal No 4
