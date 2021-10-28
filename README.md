@@ -23,6 +23,7 @@ Dan untuk semua node lainnya ditambahkan
 
 ## Soal No 2
 Luffy ingin menghubungi Franky yang berada di EniesLobby dengan denden mushi. Kalian diminta Luffy untuk membuat website utama dengan mengakses franky.yyy.com dengan alias www.franky.yyy.com pada folder kaizoku (2).
+
 ****Tahapnya:****
 pertama install `apt-get install nano` dan `apt-get install bash`
 lalu buat `script.sh` dan isi dengan instalasi aplikasi
@@ -69,6 +70,7 @@ apt-get install lynx
 
 setelah itu restart **EniesLobby** dengan ``service bind9 restart``
 dan di console **Loguetown**  ubah nameserver menjadi nameserver EniesLobby yaitu `10.25.2.2` dan lakukan ``ping www.franky.D08.com``
+
 ![2](./images/2.jpg)
 
 ## Soal No 3
@@ -101,10 +103,12 @@ www     IN     CNAME    super.franky.D08.com.
 
 setelah itu restart **EniesLobby** dengan ``service bind9 restart``
 dan di console **Loguetown**  ubah nameserver menjadi nameserver EniesLobby yaitu `10.25.2.2` dan lakukan ``ping www.super.franky.D08.com``
+
 ![3](./images/3.jpg)
 
 ## Soal No 4
 Buat juga reverse domain untuk domain utama (4). 
+
 ****Tahapnya:****
 
 Di EniesLobby command:
@@ -132,10 +136,12 @@ Dibagian bawahnya ubah menjadi
 
 setelah itu restart **EniesLobby** dengan ``service bind9 restart``
 dan di console **Loguetown**  ubah nameserver menjadi nameserver EniesLobby yaitu `10.25.2.2` dan lakukan ``ping www.super.franky.D08.com``
+
 ![4](./images/4.jpg)
 
 ## Soal No 5
 Supaya tetap bisa menghubungi Franky jika server EniesLobby rusak, maka buat Water7 sebagai DNS Slave untuk domain utama (5). 
+
 ****tahapnya:****
 **Di EniesLobby** command
 ``nano /etc/bind/named.conf.local``
@@ -171,6 +177,7 @@ zone "franky.D08.com" {
 **Buka console **Loguetown****
 Tambahkan nameserver water 7 yaitu `10.25.2.3`
 `ping franky.D08.com` di console **Loguetown**
+
 ![5](./images/5.jpg)
 
 ## Soal No 6
@@ -231,7 +238,8 @@ Setelah disimpan maka lakukan:
 **Buka console **Loguetown****
 Tambahkan nameserver water 7 yaitu `10.25.2.3`
 `ping franky.D08.com` di console **Loguetown**
-![6].(./images/6.jpg)
+
+![6](./images/6.jpg)
 
 
 ## Soal No 7
@@ -272,7 +280,8 @@ Setelah disimpan maka lakukan:
 **Buka console **Loguetown****
 Tambahkan nameserver water 7 yaitu `10.25.2.3`
 `ping franky.D08.com` di console **Loguetown**
-![7].(./images/7.jpg)
+
+![7](./images/7.jpg)
 
 ## Soal No 8
 ## Soal No 9
